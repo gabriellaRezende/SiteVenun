@@ -4,6 +4,7 @@
 <!-- You can add more screenshots here if you like -->
 
 ## Tecnologias
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
 
 
 ## License
