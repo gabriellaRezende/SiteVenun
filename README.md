@@ -2,8 +2,6 @@
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="https://github.com/user-attachments/assets/3d1b49ec-8fc3-4b4f-a51c-8b3d8f45a92a" width="200">
-<img src="https://github.com/user-attachments/assets/b89f6d21-4880-416c-a698-49396b34a926" width="200">
 
 ## Tecnologias
 
