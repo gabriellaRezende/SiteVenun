@@ -10,11 +10,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sitevenun.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializa o banco com o app
-db.init_app(app)
+# te
+db.init_app(app) 
 
 #Render Index
 @app.route('/')
-def index():
+def index(): 
     return render_template('index.html')
 
 #Render Login
