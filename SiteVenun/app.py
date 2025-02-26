@@ -1,6 +1,16 @@
 from flask import Flask, render_template, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+from flask import request
+
 
 app = Flask(__name__)
+
+## Criação do banco de dados
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sitevenun.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+# Instância do SQLAlchemy
+db = SQLAlchemy(app)
 
 @app.route('/')
 def index():
