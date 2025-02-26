@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sitevenun.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Instância do SQLAlchemy
+# Inicializa o banco com o app
 db.init_app(app)
 
 
@@ -16,20 +16,14 @@ db.init_app(app)
 def index():
     return render_template('index.html')
 
-if __name__=='__main__':
-    with app.app_context():  # Cria o contexto antes de acessar o banco
-        db.create_all()
-    app.run(debug=True)
-
 
 @app.route('/login')
 def login():
     return render_template('login.html')
 
-@app.route('/profiele')
+@app.route('/profile')
 def profile():
     return render_template('profile.html')
-
 
 @app.route('/login_handler', methods=['POST'])
 def login_handler():
@@ -66,6 +60,8 @@ def register():
 def page_not_found(error):
     return render_template('404.html')
 
-
 if __name__=='__main__':
+    with app.app_context():  # Cria o contexto antes de acessar o banco
+        db.create_all()
+        print("banco de dados criado com sucesso!")
     app.run(debug=True)
