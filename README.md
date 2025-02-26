@@ -1,14 +1,51 @@
-# Site de vendas
-
-## :camera_flash: Screenshots
-<!-- You can add more screenshots here if you like -->
-
+# Venun - Seu site de vendas
 ## Tecnologias
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)
 
 
-## License
+## :camera_flash: Screenshots
+<!-- You can add more screenshots here if you like -->
+
+
+## Como rodar o projeto
+
+### 1️⃣ Abrir o terminal e navegar até a pasta do projeto  
+
+Se o terminal não estiver na pasta do projeto, use:  
+```sh
+cd ~/Documents/GitHub/SiteVenun/SiteVenun
 ```
+
+### 2️⃣ Ativar o ambiente virtual
+Antes de rodar o projeto, ative o ambiente virtual:
+
+```sh
+source ../venv/bin/activate
+```
+### 3️⃣ Rodar o projeto
+Agora, basta rodar o Flask:
+
+```sh
+python3 app.py
+```
+
+### 4️⃣ Abrir no navegador
+Se tudo estiver certo, a saída mostrará algo como:
+
+```sh
+Running on http://127.0.0.1:5000/
+```
+
+### 5️⃣ Desativar o ambiente virtual (opcional)
+Quando terminar de trabalhar no projeto, pode desativar o ambiente virtual com:
+
+```sh
+deactivate
+```
+
+
+## License
+
 The MIT License (MIT)
 
 Copyright (c) 2025 Guilherme Vicente França d Carmo && Maria Gabriella Rubin Rezende
