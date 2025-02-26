@@ -10,7 +10,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///sitevenun.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # Inicializa o banco com o app
-# te
 db.init_app(app) 
 
 #Render Index
@@ -33,10 +32,11 @@ def profile():
 def cart():
     return render_template('cart.html')
 
-#Render checkout
-@app.rout('/checkout.html')
-def checkout():
-    return render_template('checkout.html')
+#Render checkout 
+
+#Render shop-single
+
+#Render shop
 
 #Login para fazer
 @app.route('/login_handler', methods=['POST'])
