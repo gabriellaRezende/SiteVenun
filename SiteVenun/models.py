@@ -1,5 +1,6 @@
-from app import app, db
+from flask_sqlalchemy import SQLAlchemy
 
+db = SQLAlchemy()
 
 ## Usuário
 
@@ -19,8 +20,3 @@ class Product(db.Model):
     descricao = db.Column(db.Text, nullable=False)
     preco = db.Column(db.Float, nullable=False)
     imagem = db.Column(db.String(200), nullable=True)
-
-with app.app_context():
-    db.create_all()
-
-print("Banco de dados criado com sucesso!")
