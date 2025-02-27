@@ -1,8 +1,8 @@
 {% extends 'core/base.html' %}
 
-{% block title%}Loja PW II{% endblock %}
+{% block title %}Loja PW II{% endblock %}
 
-{% block wrapper%}
+{% block wrapper %}
 
 	<div id="wrapper" class="clearfix">
 
@@ -19,11 +19,12 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/dress/1.jpg" alt="Checked Short Dress"></a>
-									<a href="#"><img src="images/shop/dress/1-1.jpg" alt="Checked Short Dress"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/dress/1.jpg') }}" alt="Checked Short Dress"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/dress/1-1.jpg') }}" alt="Checked Short Dress"></a>
 									<div class="sale-flash badge bg-secondary p-2">Out of Stock</div>
 									<div class="bg-overlay">
-										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
+										<div class="bg-overlay-content align-items-end justify-content-between"
+											data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
 											<a href="include/ajax/shop-item.html" class="btn btn-dark" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
 										</div>
@@ -47,8 +48,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/pants/1-1.jpg" alt="Slim Fit Chinos"></a>
-									<a href="#"><img src="images/shop/pants/1.jpg" alt="Slim Fit Chinos"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/pants/1-1.jpg') }}" alt="Slim Fit Chinos"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/pants/1.jpg') }}" alt="Slim Fit Chinos"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -77,9 +78,9 @@
 									<div class="fslider" data-arrows="false">
 										<div class="flexslider">
 											<div class="slider-wrap">
-												<div class="slide"><a href="#"><img src="images/shop/shoes/1.jpg" alt="Dark Brown Boots"></a></div>
-												<div class="slide"><a href="#"><img src="images/shop/shoes/1-1.jpg" alt="Dark Brown Boots"></a></div>
-												<div class="slide"><a href="#"><img src="images/shop/shoes/1-2.jpg" alt="Dark Brown Boots"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/shoes/1.jpg') }}" alt="Dark Brown Boots"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/shoes/1-1.jpg') }}" alt="Dark Brown Boots"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/shoes/1-2.jpg') }}" alt="Dark Brown Boots"></a></div>
 											</div>
 										</div>
 									</div>
@@ -108,8 +109,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/dress/2.jpg" alt="Light Blue Denim Dress"></a>
-									<a href="#"><img src="images/shop/dress/2-2.jpg" alt="Light Blue Denim Dress"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/dress/2.jpg') }}" alt="Light Blue Denim Dress"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/dress/2-2.jpg') }}" alt="Light Blue Denim Dress"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -135,8 +136,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/sunglasses/1.jpg" alt="Unisex Sunglasses"></a>
-									<a href="#"><img src="images/shop/sunglasses/1-1.jpg" alt="Unisex Sunglasses"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/sunglasses/1.jpg') }}" alt="Unisex Sunglasses"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/sunglasses/1-1.jpg') }}" alt="Unisex Sunglasses"></a>
 									<div class="sale-flash badge bg-success p-2 text-uppercase">Sale!</div>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
@@ -163,8 +164,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/tshirts/1.jpg" alt="Blue Round-Neck Tshirt"></a>
-									<a href="#"><img src="images/shop/tshirts/1-1.jpg" alt="Blue Round-Neck Tshirt"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/tshirts/1.jpg') }}" alt="Blue Round-Neck Tshirt"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/tshirts/1-1.jpg') }}" alt="Blue Round-Neck Tshirt"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -190,8 +191,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/watches/1.jpg" alt="Silver Chrome Watch"></a>
-									<a href="#"><img src="images/shop/watches/1-1.jpg" alt="Silver Chrome Watch"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/watches/1.jpg') }}" alt="Silver Chrome Watch"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/watches/1-1.jpg') }}" alt="Silver Chrome Watch"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -217,8 +218,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/shoes/2.jpg" alt="Men Grey Casual Shoes"></a>
-									<a href="#"><img src="images/shop/shoes/2-1.jpg" alt="Men Grey Casual Shoes"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/shoes/2.jpg') }}" alt="Men Grey Casual Shoes"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/shoes/2-1.jpg') }}" alt="Men Grey Casual Shoes"></a>
 									<div class="sale-flash badge bg-success p-2 text-uppercase">Sale!</div>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
@@ -248,9 +249,9 @@
 									<div class="fslider" data-arrows="false">
 										<div class="flexslider">
 											<div class="slider-wrap">
-												<div class="slide"><a href="#"><img src="images/shop/dress/3.jpg" alt="Pink Printed Dress"></a></div>
-												<div class="slide"><a href="#"><img src="images/shop/dress/3-1.jpg" alt="Pink Printed Dress"></a></div>
-												<div class="slide"><a href="#"><img src="images/shop/dress/3-2.jpg" alt="Pink Printed Dress"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/dress/3.jpg') }}" alt="Pink Printed Dress"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/dress/3-1.jpg') }}" alt="Pink Printed Dress"></a></div>
+												<div class="slide"><a href="#"><img src="{{ url_for('static', filename='images/shop/dress/3-2.jpg') }}" alt="Pink Printed Dress"></a></div>
 											</div>
 										</div>
 									</div>
@@ -279,8 +280,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/pants/5.jpg" alt="Green Trousers"></a>
-									<a href="#"><img src="images/shop/pants/5-1.jpg" alt="Green Trousers"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/pants/5.jpg') }}" alt="Green Trousers"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/pants/5-1.jpg') }}" alt="Green Trousers"></a>
 									<div class="sale-flash badge bg-success p-2 text-uppercase">Sale!</div>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
@@ -307,8 +308,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/sunglasses/2.jpg" alt="Men Aviator Sunglasses"></a>
-									<a href="#"><img src="images/shop/sunglasses/2-1.jpg" alt="Men Aviator Sunglasses"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/sunglasses/2.jpg') }}" alt="Men Aviator Sunglasses"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/sunglasses/2-1.jpg') }}" alt="Men Aviator Sunglasses"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -334,8 +335,8 @@
 						<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 							<div class="grid-inner">
 								<div class="product-image">
-									<a href="#"><img src="images/shop/tshirts/4.jpg" alt="Black Polo Tshirt"></a>
-									<a href="#"><img src="images/shop/tshirts/4-1.jpg" alt="Black Polo Tshirt"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/tshirts/4.jpg') }}" alt="Black Polo Tshirt"></a>
+									<a href="#"><img src="{{ url_for('static', filename='images/shop/tshirts/4-1.jpg') }}" alt="Black Polo Tshirt"></a>
 									<div class="bg-overlay">
 										<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 											<a href="#" class="btn btn-dark me-2"><i class="icon-shopping-basket"></i></a>
@@ -366,7 +367,6 @@
 
 		{% include 'core/footer.html' %}
 
-
 	</div><!-- #wrapper end -->
 
-	{% endblock %}
+{% endblock %}
