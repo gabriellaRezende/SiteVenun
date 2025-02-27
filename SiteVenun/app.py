@@ -16,8 +16,8 @@ db.init_app(app)
 # Render Index
 @app.route('/')
 def index(): 
-    product = Product.query.all()
-    return render_template('index.html', products=product)
+    products = Product.query.all()
+    return render_template('index.html', products=products)
 
 # Render Login (exibe a página de login quando seleciona logout)
 @app.route('/logout')
@@ -109,10 +109,11 @@ def add_to_cart():
     return render_template('cart.html')
 
 #Render shop_single
-@app.route('/shop_single')
+@app.route('/shop_single/<int:product_id>')
 def shop_single(product_id):
     product = Product.query.get_or_404(product_id)
-    return render_template('shop_single.html')
+    print(product)
+    return render_template('shop_single.html', product=product)
 
 # Render shop
 @app.route('/shop')
