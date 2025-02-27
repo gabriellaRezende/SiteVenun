@@ -20,10 +20,10 @@
                                         <div class="flexslider">
                                             <div class="slider-wrap" data-lightbox="gallery">
                                                 <div class="slide" data-thumb="{{ url_for('static', filename='images/shop/thumbs/dress/3.jpg') }}">
-                                                    <a href="{{ url_for('static', filename='images/shop/dress/3.jpg') }}" 
+                                                    <a href="{{ url_for('static', filename=product.image_one) }}" 
                                                     title="Pink Printed Dress - Front View" 
                                                     data-lightbox="gallery-item">
-                                                        <img src="{{ url_for('static', filename='images/shop/dress/3.jpg') }}" 
+                                                        <img src="{{ url_for('static', filename=product.image_two) }}" 
                                                         alt="Pink Printed Dress">
                                                     </a>
                                                 </div>
@@ -31,7 +31,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="sale-flash badge bg-danger p-2">Promoção!</div>
                                 </div>
                             </div>
 
@@ -40,7 +39,7 @@
                                 <div class="d-flex align-items-center justify-content-between">
                                     <div class="product-price">
                                         <del>R$ 199,90</del> 
-                                        <ins>R$ 149,90</ins>
+                                        <ins>€{{ product.preco }}</ins>
                                     </div>
                                     <div class="product-rating">
                                         <i class="icon-star3"></i>
@@ -77,20 +76,7 @@
                                 <div class="line"></div>
 
                                 <!-- Descrição -->
-                                <p>Vestido rosa estampado em algodão orgânico, ideal para o verão.</p>
-                                <ul class="iconlist">
-                                    <li><i class="icon-caret-right"></i> Disponível em 4 cores</li>
-                                    <li><i class="icon-caret-right"></i> Tamanhos P a GG</li>
-                                    <li><i class="icon-caret-right"></i> Garantia de 30 dias</li>
-                                </ul>
-
-                                <!-- Metadados -->
-                                <div class="card product-meta">
-                                    <div class="card-body">
-                                        <span class="sku_wrapper">SKU: <span class="sku">8465415</span></span>
-                                        <span class="posted_in">Categoria: <a href="#" rel="tag">Vestidos</a></span>
-                                    </div>
-                                </div>
+                                <p>{{ product.descricao }}.</p>
 
                                 <!-- Compartilhamento -->
                                 <div class="si-share border-0 d-flex justify-content-between align-items-center mt-4">
@@ -146,15 +132,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Produtos Relacionados -->
-                <div class="line"></div>
-                <div class="w-100">
-                    <h4>Produtos Relacionados</h4>
-                    <div class="owl-carousel product-carousel carousel-widget">
-                        <!-- Itens do carrossel... -->
                     </div>
                 </div>
             </div>

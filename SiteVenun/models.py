@@ -18,5 +18,6 @@ class Product(db.Model):
     product_id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(100), nullable=False)
     preco = db.Column(db.Float, nullable=False)
+    descricao = db.Column(db.String(200), nullable=False)
     imagem_one = db.Column(db.String(200), nullable=True)
     imagem_two = db.Column(db.String(200), nullable=True)
