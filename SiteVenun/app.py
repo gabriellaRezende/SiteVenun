@@ -118,7 +118,8 @@ def shop_single(product_id):
 # Render shop
 @app.route('/shop')
 def shop():
-    return render_template('shop.html')
+    products = Product.query.all()
+    return render_template('shop.html', products=products)
 
 # Render 404
 @app.errorhandler(404)
