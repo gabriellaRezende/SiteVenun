@@ -58,6 +58,9 @@
                                       method="post" 
                                       action="{{ url_for('add_to_cart') }}" 
                                       enctype="multipart/form-data">
+                                    <!-- Campo oculto para enviar o ID do produto -->
+                                    <input type="hidden" name="product_id" value="{{ product.product_id }}">
+                                    
                                     <div class="quantity clearfix">
                                         <button type="button" class="minus">-</button>
                                         <input type="number" 

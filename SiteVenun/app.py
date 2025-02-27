@@ -98,15 +98,15 @@ def profile():
         return redirect(url_for('login'))
     return render_template('profile.html', user_html=user)
 
-# Render Cart
+"""# Render Cart
 @app.route('/cart')
 def cart():
-    return render_template('cart.html')
+    return render_template('cart.html')"""
 
-# Render Cart
+""" # Render Cart
 @app.route('/add_to_cart')
 def add_to_cart():
-    return render_template('cart.html')
+    return render_template('cart.html') """
 
 #Render shop_single
 @app.route('/shop_single/<int:product_id>')
@@ -120,6 +120,53 @@ def shop_single(product_id):
 def shop():
     products = Product.query.all()
     return render_template('shop.html', products=products)
+
+# Rota para adicionar um produto ao carrinho (POST)
+@app.route('/add_to_cart', methods=['POST'])
+def add_to_cart():
+    # Obtém os dados do formulário
+    product_id = request.form.get('product_id')
+    quantity = request.form.get('quantity', 1)
+    
+    try:
+        quantity = int(quantity)
+    except ValueError:
+        quantity = 1
+
+    # Obtém o carrinho da sessão, ou inicializa um dicionário vazio se não existir
+    cart = session.get('cart', {})
+
+    # Se o produto já estiver no carrinho, atualiza a quantidade; senão, adiciona-o
+    if product_id in cart:
+        cart[product_id] += quantity
+    else:
+        cart[product_id] = quantity
+
+    session['cart'] = cart  # Atualiza a sessão
+    flash("Produto adicionado ao carrinho!", "success")
+    return redirect(url_for('cart'))
+
+# Rota para exibir o carrinho
+@app.route('/cart')
+def cart():
+    cart = session.get('cart', {})  # Recupera o carrinho da sessão
+    cart_items = []
+    total = 0
+    # Para cada item no carrinho, busca os dados do produto no banco
+    for prod_id, qty in cart.items():
+        product = Product.query.get(int(prod_id))
+        if product:
+            cart_items.append({'product': product, 'quantity': qty})
+            total += product.preco * qty
+    return render_template('cart.html', cart_items=cart_items, total=total)
+
+@app.route('/remove-from-cart/<int:product_id>')
+def remove_from_cart(product_id):
+    cart = session.get('cart', {})
+    if str(product_id) in cart:
+        del cart[str(product_id)]
+        session['cart'] = cart
+    return redirect(url_for('cart'))
 
 # Render 404
 @app.errorhandler(404)
