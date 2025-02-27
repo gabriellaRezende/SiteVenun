@@ -16,7 +16,8 @@ db.init_app(app)
 # Render Index
 @app.route('/')
 def index(): 
-    return render_template('index.html')
+    product = Product.query.all()
+    return render_template('index.html', products=product)
 
 # Render Login (exibe a página de login quando seleciona logout)
 @app.route('/logout')

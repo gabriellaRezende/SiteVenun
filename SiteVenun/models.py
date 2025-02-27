@@ -15,8 +15,8 @@ class User(db.Model):
 ## Produto
 
 class Product(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    product_id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(100), nullable=False)
-    descricao = db.Column(db.Text, nullable=False)
     preco = db.Column(db.Float, nullable=False)
-    imagem = db.Column(db.String(200), nullable=True)
+    imagem_one = db.Column(db.String(200), nullable=True)
+    imagem_two = db.Column(db.String(200), nullable=True)
