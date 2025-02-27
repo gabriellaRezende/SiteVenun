@@ -34,9 +34,15 @@ def cart():
 
 #Render checkout 
 
-#Render shop-single
+#Render shop_single
+@app.route('/shop_single')
+def shop_single():
+    return render_template('shop_single.html')
 
 #Render shop
+@app.route('/shop')
+def shop():
+    return render_template('shop.html')
 
 #Login para fazer
 @app.route('/login_handler', methods=['POST'])
